@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-vue-dialog",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Dialog helper for bootstrap-vue framework",
   "scripts": {
     "build2": "npm run build && cp -r dist/ ../genesis/node_modules/bootstrap-vue-dialog/dist/  && cp -r src/ ../genesis/node_modules/bootstrap-vue-dialog/src/",
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/yariksav/bootstrap-vue-dialog#readme",
   "dependencies": {
-    "vuedl": "0.0.5"
+    "vuedl": "0.0.6"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.24",
