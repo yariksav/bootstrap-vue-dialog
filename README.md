@@ -69,9 +69,20 @@ this.$dialog.error({ text: 'Cannot delete this item', title: 'Error'})
 let res = await this.$dialog.prompt({ text: 'Your name', title: 'Please input your name' })
 ```
 
-### Toasts
+<!-- ### Toasts
 ```js
 const res = await this.$dialog.toast({ text: 'Do you really want to exit?'})
+``` -->
+### Floating notifications
+```js
+this.$dialog.notify.success('Success notification')
+this.$dialog.notify.warning('Warning notification')
+this.$dialog.notify.error('Error notification')
+this.$dialog.notify.info('Info notification')
+this.$dialog.notify.error('No autoclose notification', { timeout : 0 })
+this.$dialog.notify.info('Top left notification', { position: 'top-left' })
+this.$dialog.notify.info('Bottom right notification', { position: 'bottom-right' }
+this.$dialog.notify.info('Bottom left notification', { position: 'bottom-left' })
 ```
 
 ### Actions

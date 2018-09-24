@@ -9,7 +9,7 @@
       <slot/>
     </div>
     <footer v-if="actions" class="modal-footer">
-      <DialogActions :actions="actions"/>
+      <DialogActions :actions="actions" ref="actions"/>
     </footer>
   </div>
 </template>
@@ -43,6 +43,11 @@ export default {
         },
         this.headerClass
       ]
+    }
+  },
+  methods: {
+    trigger (name) {
+      this.$refs.actions && this.$refs.actions.trigger(name)
     }
   }
 }
