@@ -43,10 +43,11 @@ export default {
       zIndex = zIndex - 2
       this.$destroy()
     },
-    onModalShown () {
-      const backdrop = this.$el.querySelector('.modal-backdrop')
+    onModalShown (ev) {
+      const parent = ev.target.parentElement
+      const backdrop = parent.querySelector('.modal-backdrop')
       backdrop && backdrop.style && (backdrop.style['z-index'] = ++zIndex)
-      const modal = this.$el.querySelector('.modal')
+      const modal = parent.querySelector('.modal')
       modal && modal.style && (modal.style['z-index'] = ++zIndex)
     }
   }
